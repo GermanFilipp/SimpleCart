@@ -1,0 +1,5 @@
+= SimpleCart
+
+This project rocks and uses MIT-LICENSE.
+	acts_as_product
+	acts_as_customer

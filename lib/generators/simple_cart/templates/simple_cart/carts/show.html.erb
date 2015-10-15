@@ -1,0 +1,8 @@
+<h1 class="page-header"><%= t('cart.title') %></h1>
+
+<% if @cart.cart_items.empty? %>
+   <%= t('cart.empty') %>
+<% else %>
+   <%= render partial: 'simple_cart/cart/cart_items', locals: { items: @cart.cart_items, edit: true } %>
+
+<% end %>

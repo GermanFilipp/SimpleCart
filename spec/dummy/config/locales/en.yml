@@ -20,4 +20,21 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
-  hello: "Hello world"
+  cart:
+    title: "Cart"
+    added: "Product successfully added to your cart"
+    not_added: "Product not added"
+    removed: "Product successfully removed from your cart"
+    not_removed: "Product not removed"
+    updated: "Cart successfully updated"
+    destroy: "Cart successfully destroyed"
+    not_destroy: "Cart not destroyed"
+    empty: "Cart is empty"
+    update: "Update"
+    remove: "Destroy"
+    add: "Add"
+    fields:
+     title: "Title"
+     quantity: "Quantity"
+     for_one: "Price for one"
+     for_all: "Price for all"

@@ -21,7 +21,9 @@ module SimpleCart
     end
 
     def create_current_cart
-      @current_cart = SimpleCart::Cart.create
+      @current_cart = current_customer.carts.first_or_create
+          #SimpleCart::Cart.create
+          #current_customer.carts.first_or_create
       session[:cart_id] = @current_cart.id
     end
 

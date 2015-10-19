@@ -4,23 +4,19 @@
     <th class="col-md-3"><%= t('cart.fields.title') %></th>
 
     <th class="col-md-2"><%= t('cart.fields.quantity') %></th>
-
-    <% if edit %>
-       <th class="col-md-3"></th>
-    <% end %>
     </thead>
 
     <tbody>
     <% items.each do |item| %>
        <tr>
          <td>
-           <%= item.product %>
+           <%= item.product.title %>
          </td>
 
          <td>
            <%= item.quantity %>
-           <%= form_tag(simple_cart.cart_path(item.product.product_type, item.product.id), method: 'patch') do %>
-              <%= number_field_tag('quantity['+item.product.id.to_s+']', item.product.quantity, {:min => 1, :max => 20, :class => 'form-control quantity'}) %>
+           <%= form_tag(simple_cart.cart_path( item.product.id), method: 'patch') do %>
+              <%= number_field_tag('quantity['+item.id.to_s+']',item.quantity, {:min => 1, :max => 20, :class => 'form-control quantity'}) %>
               <%= button_tag(t('cart.update'), class: 'btn btn-default') %>
            <% end %>
 
@@ -28,22 +24,17 @@
 
 
             <td>
-              <%= form_tag(simple_cart.cart_item_path(item.product.product_type, item.product.id), method: 'delete', class: 'form-inline clearfix remove-product') do %>
+              <%= form_tag(simple_cart.cart_item_path(item.product_type, item.product.id), method: 'delete', class: 'form-inline clearfix remove-product') do %>
                  <%= button_tag(t('cart.remove'), class: 'btn btn-warning') %>
               <% end %>
             </td>
 
        </tr>
-
     <% end %>
-		<%=form_tag(simple_cart.cart_path,method:"delete") do %>
-      <%= button_tag('Destroy_all')%>
-      <% end %>
 
-
-
-
-
+    <%=form_tag(simple_cart.cart_path,method:"delete") do %>
+       <%= button_tag('Destroy_all')%>
+    <% end %>
     </tbody>
   </table>
 </div>

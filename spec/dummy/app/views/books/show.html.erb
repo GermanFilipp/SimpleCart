@@ -1,0 +1,28 @@
+<row>
+  <div class="container">
+
+
+    <div class="col-md-4 ">
+
+      <p class="title"><h3><%= @book.title%></h3></p>
+      <p class="price"><h3><%=number_to_currency @book.price%></h3></p>
+      <p class="date">Quentity Books: <%= @book.quentity_books%></p>
+      <p class="date"><h4>Description:</h4></br><%= @book.description%></p>
+    </div>
+
+    <div class="col-md-2">
+
+      <%= render partial: 'simple_cart/cart_items/add_to_cart', locals: {product: @book} %>
+    </div>
+
+
+<%= link_to "cart" ,  simple_cart.cart_path  %>
+
+
+  </div>
+  </div>
+
+  </div>
+
+  </div>
+</row>

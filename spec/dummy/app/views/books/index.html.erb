@@ -1,0 +1,14 @@
+<% @books.each do |book|%>
+
+   <div  class="col-xs-3 book">
+
+     <div class="thumbnail">
+
+       <h5> <p class="title"><%= link_to book.title,  book_path(book)%></p></h5>
+       <hr>
+       <p class="price"><%=number_to_currency book.price%></p>
+     </div>
+
+   </div>
+
+<% end %>

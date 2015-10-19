@@ -17,12 +17,6 @@ module SimpleCart
       private
 
       def extend_product(product_class)
-        product_class.class_eval do
-          def product_type
-            self.class.to_s.underscore
-          end
-
-        end
 
         product_class.send(:has_many, :cart_items, {
                                         class_name: 'SimpleCart::CartItem',

@@ -10,8 +10,8 @@ Gem::Specification.new do |s|
   s.authors     = ["GermanFilipp"]
   s.email       = ["ger772@yandex.ru"]
   s.homepage    = "https://github.com/GermanFilipp/SimpleCart"
-  s.summary     = "TODO: Summary of SimpleCart."
-  s.description = "TODO: Description of SimpleCart."
+  s.summary     = "Summary of SimpleCart."
+  s.description = "Description of SimpleCart."
   s.license     = "MIT"
 
   s.files = Dir["{app,config,db,lib}/**/*", "MIT-LICENSE", "Rakefile", "README.rdoc"]

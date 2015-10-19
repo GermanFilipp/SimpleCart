@@ -9,7 +9,7 @@ Gem::Specification.new do |s|
   s.version     = SimpleCart::VERSION
   s.authors     = ["GermanFilipp"]
   s.email       = ["ger772@yandex.ru"]
-  s.homepage    = "TODO"
+  s.homepage    = "https://github.com/GermanFilipp/SimpleCart"
   s.summary     = "TODO: Summary of SimpleCart."
   s.description = "TODO: Description of SimpleCart."
   s.license     = "MIT"
